@@ -20,7 +20,7 @@ src_install() {
 	doexe haxefetch
 }
 
-pkg_postins() {
+pkg_postinst() {
    optfeature_header "Optional features as suggested by haxefetch --recommends:"
    optfeature "sys-apps/inxi for inxi: to show RAM type"
    optfeature "media-libs/mesa for Mesa"
