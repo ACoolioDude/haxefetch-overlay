@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit optfeature
+
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
 SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}"
