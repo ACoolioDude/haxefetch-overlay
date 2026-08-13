@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>stefanbeta2008@gmail.com</email>
+		<name>ACoolioDude</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">ACoolioDude/Haxefetch</remote-id>
+	</upstream>
+</pkgmetadata>
+metadata>
