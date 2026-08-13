@@ -3,39 +3,33 @@
 
 EAPI=8
 
-DESCRIPTION="A fetch program inspired by other fetches written in Haxe"
+DESCRIPTION="A fast, lightweight system fetch written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
 
-HAXEFETCH_COMMIT="e0344f41fa91f4f2c9432eb0492c7a7a4ef55b7f"
-
-SRC_URI="https://github.com/ACoolioDude/Haxefetch/raw/${HAXEFETCH_COMMIT}/binary/haxefetch -> ${P}"
+SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}-bin"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE=""
 
-IUSE="+inxi +opengl +vulkan"
-
-RDEPEND="
-	inxi? ( sys-apps/inxi )
-	opengl? ( x11-apps/mesa-progs media-libs/mesa[X] )
-	vulkan? ( dev-util/vulkan-tools dev-util/vulkan-headers media-libs/mesa[vulkan] )
-"
-S="${WORKDIR}/${P}"
-
-src_install() {
-	newbin "${P}" haxefetch
-}
-${P}"
-
-LICENSE="MIT"
-SLOT="0"
-KEYWORDS="amd64"
+BDEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}"
 
+src_unpack() {
+	cp "${DISTDIR}/${P}-bin" "${S}/haxefetch" || die
+}
+
+src_compile() {
+	:
+}
+
 src_install() {
-	newbin "${P}" haxefetch
+	# Install to /usr/bin/haxefetch with executable permissions
+	exeinto /usr/bin
+	doexe haxefetch
 }
 
 pkg_postins() {
