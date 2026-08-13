@@ -14,7 +14,14 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}"
+IUSE="+inxi +opengl +vulkan"
+
+RDEPEND="
+	inxi? ( sys-apps/inxi )
+	opengl? ( x11-apps/mesa-progs media-libs/mesa[X] )
+	vulkan? ( dev-util/vulkan-tools dev-util/vulkan-headers media-libs/mesa[vulkan] )
+"
+S="${WORKDIR}/${P}"
 
 src_install() {
 	newbin "${P}" haxefetch
