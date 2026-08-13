@@ -15,14 +15,17 @@ IUSE=""
 
 S="${WORKDIR}"
 
+src_unpack() {
+   cp "${DISTDIR}/${P}-bin" "${S}/haxefetch" || die "Error"
+}
+
 src_compile() {
 	:
 }
 
 src_install() {
 	exeinto /usr/bin
-   newexe Haxefetch haxefetch
-   # doexe haxefetch
+   doexe haxefetch
 }
 
 pkg_postins() {
