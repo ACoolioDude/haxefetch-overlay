@@ -14,12 +14,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND="
-	inxi? ( sys-apps/inxi )
-	opengl? ( x11-apps/mesa-progs media-libs/mesa[X] )
-	vulkan? ( dev-util/vulkan-tools dev-util/vulkan-headers media-libs/mesa[vulkan] )
-"
-
 S="${WORKDIR}"
 
 src_install() {
@@ -30,14 +24,6 @@ ${P}"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
-
-IUSE="+inxi +opengl +vulkan"
-
-RDEPEND="
-	inxi? ( sys-apps/inxi )
-	opengl? ( x11-apps/mesa-progs media-libs/mesa[X] )
-	vulkan? ( dev-util/vulkan-tools dev-util/vulkan-headers media-libs/mesa[vulkan] )
-"
 
 S="${WORKDIR}"
 
@@ -53,4 +39,4 @@ pkg_postins() {
    optfeature "media-libs/vulkan-loader for Vulkan"
    optfeature "dev-util/vulkan-headers for Vulkan headers"
    optfeature "dev-util/vulkan-tools for Vulkan tools: to show Vulkan version"
-  }
+}
