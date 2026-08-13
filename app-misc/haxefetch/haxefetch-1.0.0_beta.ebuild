@@ -21,7 +21,8 @@ src_compile() {
 
 src_install() {
 	exeinto /usr/bin
-	doexe haxefetch
+   newexe Haxefetch haxefetch
+   # doexe haxefetch
 }
 
 pkg_postins() {
