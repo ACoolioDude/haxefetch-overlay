@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-SRC_URI="https://github.com/ACoolioDude/Haxefetch/releases/download/1.0.0-alpha/haxefetch -> ${P}"
+SRC_URI="https://github.com/ACoolioDude/Haxefetch/releases/download/1.0.0-alpha/haxefetch-1.0.0-a.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
