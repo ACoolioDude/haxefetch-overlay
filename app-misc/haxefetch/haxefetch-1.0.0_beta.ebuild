@@ -5,16 +5,13 @@ EAPI=8
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-# HAXEFETCH_COMMIT="e0344f41fa91f4f2c9432eb0492c7a7a4ef55b7f"
+HAXEFETCH_COMMIT="e0344f41fa91f4f2c9432eb0492c7a7a4ef55b7f"
 SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
-
-BDEPEND=""
-RDEPEND=""
 
 S="${WORKDIR}"
 
@@ -27,7 +24,6 @@ src_compile() {
 }
 
 src_install() {
-	# Install to /usr/bin/haxefetch with executable permissions
 	exeinto /usr/bin
 	doexe haxefetch
 }
