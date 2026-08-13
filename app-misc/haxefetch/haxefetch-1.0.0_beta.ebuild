@@ -15,10 +15,6 @@ IUSE=""
 
 S="${WORKDIR}"
 
-src_unpack() {
-	cp "${DISTDIR}/${P}-bin" "${S}/haxefetch" || die
-}
-
 src_compile() {
 	:
 }
