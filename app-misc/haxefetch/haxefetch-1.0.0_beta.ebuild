@@ -6,7 +6,8 @@ EAPI=8
 DESCRIPTION="A fast, lightweight system fetch written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
 
-SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}-bin"
+SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/${HAXEFETCH_COMMIT}/main/binary/haxefetch -> ${P}-bin"
+HAXEFETCH_COMMIT="e0344f41fa91f4f2c9432eb0492c7a7a4ef55b7f"
 
 LICENSE="MIT"
 SLOT="0"
