@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64"
 IUSE=""
 
-S="${WORKDIR}/haxefetch-1.0.0-a"
+S="${WORKDIR}"
 
 src_install() {
 	exeinto /usr/bin
