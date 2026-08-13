@@ -5,7 +5,7 @@ EAPI=8
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-HAXEFETCH_COMMIT="e0344f41fa91f4f2c9432eb0492c7a7a4ef55b7f"
+# HAXEFETCH_COMMIT="e0344f41fa91f4f2c9432eb0492c7a7a4ef55b7f"
 SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}"
 
 LICENSE="MIT"
@@ -16,7 +16,7 @@ IUSE=""
 S="${WORKDIR}"
 
 src_unpack() {
-   cp "${DISTDIR}/${P}-bin" "${S}/haxefetch" || die "Error"
+   cp "${DISTDIR}/${P}" "${S}/haxefetch" || die "Error copying binary"
 }
 
 src_compile() {
