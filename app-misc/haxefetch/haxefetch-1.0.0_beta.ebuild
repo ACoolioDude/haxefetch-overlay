@@ -7,7 +7,8 @@ inherit optfeature
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}"
+HAXEFETCH_COMMIT="62ff550372d4dfe9a2c361ab0f8d91f9d3f7c0da"
+SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/${HAXEFETCH_COMMIT}/binary/haxefetch -> ${P}"
 
 LICENSE="MIT"
 SLOT="0"
