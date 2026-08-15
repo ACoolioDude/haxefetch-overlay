@@ -7,7 +7,7 @@ inherit optfeature
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}"
+SRC_URI="https://github.com/ACoolioDude/Haxefetch/releases/download/1.0.0-beta/haxefetch-1.0.0-b.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -15,14 +15,6 @@ KEYWORDS="amd64"
 IUSE=""
 
 S="${WORKDIR}"
-
-src_unpack() {
-   cp "${DISTDIR}/${P}" "${S}/haxefetch" || die "Error copying binary"
-}
-
-src_compile() {
-	:
-}
 
 src_install() {
 	exeinto /usr/bin
