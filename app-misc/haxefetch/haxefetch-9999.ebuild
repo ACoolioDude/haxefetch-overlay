@@ -4,6 +4,7 @@
 EAPI=8
 
 inherit optfeature
+inherit git-r3
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
