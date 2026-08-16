@@ -8,7 +8,7 @@ inherit git-r3
 
 DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-EGIT_REPO_URL="https://github.com/ACoolioDude/Haxefetch.git"
+EGIT_REPO_URI="https://github.com/ACoolioDude/Haxefetch.git"
 HXCPP_VERSION="4.3.2"
 
 SRC_URI="https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCPP_VERSION}.zip"
