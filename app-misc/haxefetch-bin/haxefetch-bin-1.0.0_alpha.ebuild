@@ -12,7 +12,7 @@ SRC_URI="https://github.com/ACoolioDude/Haxefetch/releases/download/1.0.0-alpha/
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 S="${WORKDIR}"
