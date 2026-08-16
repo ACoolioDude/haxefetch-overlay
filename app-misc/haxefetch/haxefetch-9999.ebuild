@@ -44,12 +44,18 @@ src_compile() {
 
     haxelib dev hxcpp "${hxcpp_path}"
 
-    einfo "Attempting building Haxefetch"
+    einfo "Compiling Haxefetch.."
     haxe build.hxml || die "Haxefetch compilation failed!"
 }
 
 src_install() {
-    dobin bin/cpp/Haxefetch
+    local bin_path=$(find bin/ -type f -executable ! -name ".so" ! -name "*.dylib" 2>/dev/null | head -n 1)
+    if [[ -n "${bin_path}" ]]; then
+        einfo "Attempting installing bin from ${bin_path} to /usr/bin"
+        newbin "${bin_path}" haxefetch
+    else
+        die "Could not find binary LOL. Aborting!"
+    fi
 }
 
 pkg_postinst() {
