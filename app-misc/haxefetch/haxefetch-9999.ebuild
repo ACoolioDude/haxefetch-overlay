@@ -37,7 +37,15 @@ src_compile() {
     mkdir -p "${HAXELIB_PATH}"
     haxelib setup "${HAXELIB_PATH}"
 
-    haxe build.hxml || die "Haxe compilation failed!"
+    local hxcpp_path=${find "${WORKDIR}/hxcpp-src" -name "haxelib.json" -exec dirname {} \;}
+    if [[ -z "${hxcpp_path}"]]; then
+        die "HXCPP directory not found. Aborting!"
+    fi
+
+    haxelib dev hxcpp "${hxcpp_path}"
+
+    einfo "Attempting building Haxefetch"
+    haxe build.hxml || die "Haxefetch compilation failed!"
 }
 
 src_install() {
