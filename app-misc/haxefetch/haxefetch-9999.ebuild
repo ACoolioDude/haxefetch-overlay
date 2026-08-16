@@ -22,7 +22,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_unpack() {
+src_prepare() {
     default
     einfo "Extract HXCPP"
     mkdir -p "${WORKDIR}/hxcpp-src" || die
