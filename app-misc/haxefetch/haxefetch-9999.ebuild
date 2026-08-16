@@ -23,9 +23,10 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-    default
-    mkdir -p "${WORKDIR}/hxcpp-src"
-    unzip -q "${DISTDIR}/hxcpp-${HXCPP_VERSION}.zip" -d "${WORKDIR}/hxcpp-src"
+    git-r3_src_unpack
+    mkdir -p "${WORKDIR}/hxcpp-src" || die
+    cd "${WORKDIR}/hxcpp-src" || die
+    unpack "hxcpp-${HXCPP_VERSION}.zip"
 }
 
 src_compile() {
@@ -38,4 +39,14 @@ src_compile() {
 
 src_install() {
     dobin bin/cpp/Haxefetch
+}
+
+pkg_postinst() {
+   optfeature_header "Optional features as suggested by haxefetch --recommends:"
+   optfeature "inxi: for inxi: to show RAM type" sys-apps/inxi
+   optfeature "mesa: for Mesa" media-libs/mesa
+   optfeature "mesa-progs: to show OpenGL version" x11-apps/mesa-progs
+   optfeature "vulkan-loader: for Vulkan" media-libs/vulkan-loader
+   optfeature "vulkan-headers: for Vulkan headers" dev-util/vulkan-headers
+   optfeature "vulkan-tools: for Vulkan tools: to show Vulkan version" dev-util/vulkan-tools
 }
