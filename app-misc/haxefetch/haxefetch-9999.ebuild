@@ -23,7 +23,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-    git-r3_src_unpack
+    default
     mkdir -p "${WORKDIR}/hxcpp-src"
     unzip -q "${DISTDIR}/hxcpp-${HXCPP_VERSION}.zip" -d "${WORKDIR}/hxcpp-src"
 }
