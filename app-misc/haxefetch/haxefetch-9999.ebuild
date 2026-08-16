@@ -38,7 +38,7 @@ src_compile() {
     haxelib setup "${HAXELIB_PATH}"
 
     local hxcpp_path=${find "${WORKDIR}/hxcpp-src" -name "haxelib.json" -exec dirname {} \;}
-    if [[ -z "${hxcpp_path}"]]; then
+    if [[ -z "${hxcpp_path}" ]]; then
         die "HXCPP directory not found. Aborting!"
     fi
 
