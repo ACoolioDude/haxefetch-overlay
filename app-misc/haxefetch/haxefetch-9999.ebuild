@@ -51,10 +51,10 @@ src_compile() {
 src_install() {
     local bin_path=$(find bin/ -type f -executable ! -name ".so" ! -name "*.dylib" 2>/dev/null | head -n 1)
     if [[ -n "${bin_path}" ]]; then
-        einfo "Attempting installing bin from ${bin_path} to /usr/bin"
+        einfo "Installing compiled binary from ${bin_path} to /usr/bin"
         newbin "${bin_path}" haxefetch
     else
-        die "Could not find binary LOL. Aborting!"
+        die "Could not find binary. Aborting!"
     fi
 }
 
