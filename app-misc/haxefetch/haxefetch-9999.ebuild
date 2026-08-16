@@ -11,7 +11,7 @@ HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
 EGIT_REPO_URL="https://github.com/ACoolioDude/Haxefetch.git"
 HXCPP_VERSION="4.3.2"
 
-SRC_URL="https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCPP_VERSION}.zip"
+SRC_URI="https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCPP_VERSION}.zip"
 
 LICENSE="MIT"
 SLOT=0
