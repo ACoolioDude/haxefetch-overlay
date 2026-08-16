@@ -22,8 +22,10 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-    default
+src_unpack() {
+    git-r3_fetch
+    git-r3_checkout
+
     einfo "Extract HXCPP"
     mkdir -p "${WORKDIR}/hxcpp-src" || die
     unzip -q "${DISTDIR}/hxcpp-${HXCPP_VERSION}.zip" -d "${WORKDIR}/hxcpp-src" || die
