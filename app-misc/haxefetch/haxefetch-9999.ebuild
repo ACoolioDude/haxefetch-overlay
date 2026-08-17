@@ -15,7 +15,7 @@ SRC_URI="https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCP
 
 LICENSE="MIT"
 SLOT=0
-KEYWORDS="~amd64"
+KEYWORDS=""
 
 BDEPEND="
     dev-lang/haxe-bin
