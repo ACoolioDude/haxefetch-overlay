@@ -33,9 +33,11 @@ src_compile() {
     mkdir -p "${HAXELIB_PATH}"
     haxelib setup "${HAXELIB_PATH}"
 
-    local hxcpp_path=$(find "${WORKDIR}/hxcpp-src" -name "haxelib.json" -exec dirname {} \;)
+    local hxcpp_path=$(find "${WORKDIR}" -maxdepth 3 -name "haxelib.json" -path "*/hxcpp/*" -exec dirname {}\;)
     if [[ -z "${hxcpp_path}" ]]; then
-        die "Hxcpp directory was not found. Aborting!"
+        hxcpp_path=$(find "${WORKDIR}" -maxdepth 3 -name "haxelib.json" -exec dirname {} \; | head -n 1)
+    else
+        die "Hxcpp source was not found in ${WORKDIR}. Aborting!"
     fi
 
     haxelib dev hxcpp "${hxcpp_path}"
