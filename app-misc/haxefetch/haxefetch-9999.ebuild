@@ -15,13 +15,12 @@ SRC_URI="https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCP
 
 LICENSE="MIT"
 SLOT=0
-KEYWORDS="~amd64"
+KEYWORDS=""
 
-DEPEND="
+BDEPEND="
     dev-lang/haxe-bin
     app-arch/unzip
 "
-RDEPEND="${DEPEND}"
 
 src_unpack() {
     git-r3_fetch
@@ -49,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-    local bin_path=$(find bin/ -type f -executable ! -name ".so" ! -name "*.dylib" 2>/dev/null | head -n 1)
+    local bin_path=$(find bin/ -type f -executable ! -name "*.so" ! -name "*.dylib" 2>/dev/null | head -n 1)
     if [[ -n "${bin_path}" ]]; then
         einfo "Installing compiled binary from ${bin_path} to /usr/bin"
         newbin "${bin_path}" haxefetch
