@@ -38,13 +38,13 @@ src_compile() {
 
     local hxcpp_path=$(find "${WORKDIR}/hxcpp-src" -name "haxelib.json" -exec dirname {} \;)
     if [[ -z "${hxcpp_path}" ]]; then
-        die "Hxcpp directory was not found. Aborting!"
+        die "Hxcpp directory was not found in ${WORKDIR}. Aborting!"
     fi
 
     haxelib dev hxcpp "${hxcpp_path}"
 
     einfo "Compiling Haxefetch.."
-    haxe build.hxml -D git_hash=$(git rev-parse --short HEAD) || die "Haxefetch compilation failed!"
+    haxe build.hxml -D git_hash=$(git rev-parse --short HEAD) || die "Haxefetch compilation failed. Aborting!"
 }
 
 src_install() {
