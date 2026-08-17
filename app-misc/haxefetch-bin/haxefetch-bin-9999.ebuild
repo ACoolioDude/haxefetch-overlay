@@ -12,7 +12,10 @@ SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/hax
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
+
+RDEPEND="
+    elibc_musl? ( sys-libs/gcompat )
+"
 
 S="${WORKDIR}"
 
