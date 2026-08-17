@@ -14,5 +14,5 @@
  - Emerge haxefetch (`emerge --ask --verbose --update app-misc/haxefetch`)
 
  Binary:
- - Unmask haxefetch (`echo "app-misc/haxefetch-bin ~amd64" | tee -a /etc/portage/package.accept-keywords/haxefetch-bin`)
+ - Unmask binary haxefetch (`echo "app-misc/haxefetch-bin ~amd64" | tee -a /etc/portage/package.accept-keywords/haxefetch-bin`)
  - Emerge binary haxefetch (`emerge --ask --verbose --update app-misc/haxefetch-bin`)
