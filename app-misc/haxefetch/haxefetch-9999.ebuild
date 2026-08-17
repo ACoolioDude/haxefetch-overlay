@@ -44,7 +44,7 @@ src_compile() {
     haxelib dev hxcpp "${hxcpp_path}"
 
     einfo "Compiling Haxefetch.."
-    haxe build.hxml || die "Haxefetch compilation failed!"
+    haxe build.hxml -D git_hash=$(git rev-parse --short HEAD) || die "Haxefetch compilation failed!"
 }
 
 src_install() {
