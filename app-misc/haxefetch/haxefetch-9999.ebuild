@@ -23,10 +23,9 @@ BDEPEND="
 "
 
 src_unpack() {
-    git-r3_fetch
     git-r3_checkout
 
-    einfo "Extract HXCPP"
+    einfo "Extracting Hxcpp.."
     mkdir -p "${WORKDIR}/hxcpp-src" || die
     unzip -q "${DISTDIR}/hxcpp-${HXCPP_VERSION}.zip" -d "${WORKDIR}/hxcpp-src" || die
 }
@@ -38,7 +37,7 @@ src_compile() {
 
     local hxcpp_path=$(find "${WORKDIR}/hxcpp-src" -name "haxelib.json" -exec dirname {} \;)
     if [[ -z "${hxcpp_path}" ]]; then
-        die "HXCPP directory not found. Aborting!"
+        die "Hxcpp directory was not found. Aborting!"
     fi
 
     haxelib dev hxcpp "${hxcpp_path}"
