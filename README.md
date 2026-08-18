@@ -4,8 +4,8 @@
 
 1. Install repository module (`emerge --ask --verbose eselect-repository`)
 2. Enable repos (`eselect repository add haxefetch-overlay git https://github.com/ACoolioDude/haxefetch-overlay.git && eselect repository enable riru`)
-3. Sync repos (`emerge --sync haxefetch-overlay && emerge --sync riru` || `emaint sync --repo haxefetch-overlay && emaint sync --repo riru`)
-4. Unmask dependencies (`echo -e "dev-lang/haxe-bin ~amd64\ndev-lang/neko ~amd64" | tee -a /etc/portage/package.accept-keywords/haxe`)
+3. Sync repos (`emerge --sync haxefetch-overlay` || `emaint sync --repo haxefetch-overlay`)
+4. Unmask dependencies (`echo -e "dev-lang/haxe ~amd64\ndev-lang/neko\ndev-ml/sedlex ~amd64\ndev-lang/ocaml ~amd64\ndev-ml/* ~amd64\n" | tee -a /etc/portage/package.accept-keywords/haxe`)
 4. Emerge Haxefetch (`emerge --ask --verbose app-misc/haxefetch` (for people who want to avoid compiling, i made binary ebuild and it can be emerged with `emerge --ask --verbose app-misc/haxefetch-bin`))
 
 ### If you want to get Haxefetch from latest git commits i push
