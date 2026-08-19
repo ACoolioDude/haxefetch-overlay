@@ -3,7 +3,6 @@
 
 EAPI=8
 
-inherit optfeature
 inherit git-r3
 
 DESCRIPTION="A fetch program written in Haxe"
@@ -55,14 +54,4 @@ src_install() {
     else
         die "Could not find binary. Aborting!"
     fi
-}
-
-pkg_postinst() {
-   optfeature_header "Optional features as suggested by haxefetch --recommends:"
-   optfeature "inxi: for inxi: to show RAM type" sys-apps/inxi
-   optfeature "mesa: for Mesa" media-libs/mesa
-   optfeature "mesa-progs: to show OpenGL version" x11-apps/mesa-progs
-   optfeature "vulkan-loader: for Vulkan" media-libs/vulkan-loader
-   optfeature "vulkan-headers: for Vulkan headers" dev-util/vulkan-headers
-   optfeature "vulkan-tools: for Vulkan tools: to show Vulkan version" dev-util/vulkan-tools
 }
