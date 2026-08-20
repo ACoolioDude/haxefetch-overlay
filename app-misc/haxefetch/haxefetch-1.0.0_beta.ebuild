@@ -10,10 +10,10 @@ MY_P="Haxefetch-${MY_PV}"
 HXCPP_VERSION="4.3.2"
 
 DESCRIPTION="A fetch program written in Haxe"
-HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
+HOMEPAGE="https://github.com/Sbinator-hub/Haxefetch"
 
 SRC_URI="
-    https://github.com/ACoolioDude/Haxefetch/archive/refs/tags/${MY_PV}.tar.gz -> ${P}.tar.gz
+    https://github.com/Sbinator-hub/Haxefetch/archive/refs/tags/${MY_PV}.tar.gz -> ${P}.tar.gz
     https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCPP_VERSION}.zip
 "
 

@@ -4,8 +4,8 @@
 EAPI=8
 
 DESCRIPTION="A fetch program written in Haxe (live binary)"
-HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-SRC_URI="https://raw.githubusercontent.com/ACoolioDude/Haxefetch/main/binary/haxefetch -> ${P}"
+HOMEPAGE="https://github.com/Sbinator-hub/Haxefetch"
+SRC_URI="https://raw.githubusercontent.com/Sbinator-hub/Haxefetch/main/binary/haxefetch -> ${P}"
 
 LICENSE="MIT"
 SLOT="0"

@@ -6,8 +6,8 @@ EAPI=8
 inherit git-r3
 
 DESCRIPTION="A fetch program written in Haxe (live)"
-HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
-EGIT_REPO_URI="https://github.com/ACoolioDude/Haxefetch.git"
+HOMEPAGE="https://github.com/Sbinator-hub/Haxefetch"
+EGIT_REPO_URI="https://github.com/Sbinator-hub/Haxefetch.git"
 HXCPP_VERSION="4.3.2"
 
 SRC_URI="https://lib.haxe.org/p/hxcpp/${HXCPP_VERSION}/download/ -> hxcpp-${HXCPP_VERSION}.zip"
