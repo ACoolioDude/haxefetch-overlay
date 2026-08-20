@@ -5,8 +5,8 @@ EAPI=8
 
 inherit optfeature
 
-DESCRIPTION="A fetch program written in Haxe"
 HOMEPAGE="https://github.com/ACoolioDude/Haxefetch"
+DESCRIPTION="A fetch program written in Haxe (binary)"
 SRC_URI="https://github.com/ACoolioDude/Haxefetch/releases/download/1.0.0-beta/haxefetch-1.0.0-b.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
